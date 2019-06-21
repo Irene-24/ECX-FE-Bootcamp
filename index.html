@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ECX GPcalc</title>
+</head>
+
+<body>
+    <h1>Fill in the details for the course below</h1>
+
+    <form action="" id="details">
+
+        <label for="title">
+            <p>Title</p>
+            <input class="fields" type="text" name="title" id="title" placeholder="Enter course title here...">
+        </label>
+
+        <label for="code">
+            <p>Code</p>
+            <input class="fields" type="text" name="code" id="code" placeholder="Enter course code here...">
+        </label>
+
+        <label for="unit">
+            <p>Unit</p>
+            <input class="fields" type="number" name="unit" id="unit" placeholder="Enter course unit here...">
+        </label>
+
+        <label for="score">
+            <p>Score</p>
+            <input class="fields" type="text" name="score" id="score" placeholder="Enter your score here...">
+        </label>
+
+        <button id="addcourse">ADD COURSE <i class="fas fa-plus-square fa-2x"></i> </button>
+
+    </form>
+
+
+    <div id="course-list">
+        <h2>COURSE LIST</h2>
+        <div class="headings">
+            <p>CODE</p>
+            <p>UNIT</p>
+            <p>SCORE</p>
+            <p>GRADE</p>
+        </div>
+        <div class="dark">
+            <p>ABC123</p>
+            <p>2</p>
+            <p>80</p>
+            <p>A</p>
+            <button class="modify button" data-code='ABC123'>Modify</button>
+            <button class="delete button" data-code='ABC123'>Delete</button>
+        </div>
+        <div class="light">
+            <p>ABC123</p>
+            <p>2</p>
+            <p>80</p>
+            <p>A</p>
+            <button class="modify button" data-code='ABC123'>Modify</button>
+            <button class="delete button" data-code='ABC123'>Delete</button>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/cb4a49062c.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

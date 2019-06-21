@@ -1,0 +1,201 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: #5CE1D9;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    color:white;
+    font-family:'Reem Kufi', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+button
+{
+    outline: none;
+}
+
+/*
+    FORM
+*/
+#details
+{
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+#details p
+{
+    font-size: 1.5em;
+
+}
+
+#details input
+{
+    font-size: 1.2em;
+    padding: 10px;
+    margin:  0 0 2px 0;
+    border-radius: 5px;
+    border: none;
+    width:100%;
+}
+
+#addcourse
+{
+    font-size: 0.8em;
+    display: block;
+    background: #2B8DAC;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 50px 10px 10px;
+    color: white;
+    position: relative;
+    margin: 5px auto;
+}
+
+#addcourse i
+{
+    position: absolute;
+    right:12px;
+    top:5px;
+}
+
+/*
+COURSE-LIST
+
+*/
+
+#course-list h2
+{
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-align: center;
+    width:70%;
+    margin: 20px auto;
+    border-bottom: double;
+}    
+
+.headings
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr 1fr 3fr;
+    position: relative;
+    bottom: 5px;
+}
+
+.headings p
+{
+    padding: 2px;
+    transform: rotate(-40deg);
+}
+
+
+.dark,.light
+{
+    text-align: center;
+    padding: 10px 5px;
+    margin: 4px auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr 1fr 3fr;
+}
+
+.dark
+{
+    background: #4B78BC;
+
+}
+
+.light
+{
+    background: #76A9F6;
+}
+
+.button
+{
+    position: absolute;
+    right: 3px;
+    background:#DF5050;
+    top: 20%;
+    padding: 3px;
+    border-radius: 5px;
+    border:none;
+}
+
+.modify
+{
+   right: 50px;
+   background:  #7EDF50;
+   
+}
+
+
+
+
+
+@media (min-width:420px)
+{
+    .headings
+    {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1.2fr 1fr 3fr;
+        text-align: center
+    }
+
+    .headings p 
+    {
+        transform: initial;
+    }
+    
+}
+
+@media (min-width:500px)
+{
+
+    #course-list
+    {
+        font-size: 1.2em;
+    }
+
+    .button
+    {
+       right: 10%;
+       padding:  2px 10px;
+      
+    }
+
+    .modify
+    {
+        right: 20%;
+    }
+
+    label:nth-child(n+2) > p , #details label:nth-child(n+2) > input
+    {
+        width: 40%;
+    }
+
+    #addcourse
+    {      
+        position: absolute;
+        width: 30vw;
+        right: 10%;
+        bottom: 30%;
+        font-size: 2em;
+        padding-right: 60px
+    }
+    #addcourse i
+    {
+        font-size: 1.2em;
+        top:10px
+    }
+    
+}
