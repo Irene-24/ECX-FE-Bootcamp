@@ -190,7 +190,8 @@ COURSE-LIST
         right: 10%;
         bottom: 30%;
         font-size: 2em;
-        padding-right: 60px
+        padding-right: 60px;
+        cursor:pointer;
     }
     #addcourse i
     {
