@@ -48,6 +48,7 @@ class Course
 
 }
 
+const message = document.getElementById('message');
 const courselist = [];
 const courselistDiv = document.getElementById('course-list');
 let totalunits = 0;
@@ -61,21 +62,51 @@ function addCourse(e)
     const score = Number(form['score'].value);
     const code = form['code'].value;
     const title = form['title'].value;
-    const unit = Number(form['unit'].value);
-
-    const course = new Course(code,unit,title,score);
-    totalunits +=unit;
+    const unit = Number(form['unit'].value);   
+    const letters = /^[A-Za-z]+$/;
+    const alphaNumeric = /^[A-Za-z0-9]+$/; 
     
-    courselist.push(course);
+    if (score >=0 && score <= 100){
 
-    let mode = 'light';
+        if (unit > 0 && unit <= 6){
 
-    if(courselist.length%2==0)
-    {
-        mode = 'dark'
+            if (title.match(letters)){
+
+                if (code.match(alphaNumeric)){
+
+
+                    const course = new Course(code,unit,title,score);
+                    totalunits +=unit;
+                    courselist.push(course);
+
+                    let mode = 'light';
+
+                    if(courselist.length%2==0)
+                    {
+                        mode = 'dark'
+                    }
+
+                    appendCourse(course,mode);
+
+                } else {
+                    message.textContent = 'Error! Code can only contain letters and numbers';
+
+                }
+
+
+            } else{
+                message.textContent = 'Error! Title should only contain letters';
+            }
+
+        } else {
+            message.textContent = 'Error! Unit can only be between 1 and 6';
+        }
+
+        
+    } else{
+        message.textContent = 'Error! Score can only be between 0 and 100';
     }
 
-    appendCourse(course,mode);
 
     console.log(courselist);
 
